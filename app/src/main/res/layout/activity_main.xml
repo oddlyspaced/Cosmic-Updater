@@ -13,7 +13,7 @@
         android:id="@+id/constraintLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="44dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -28,13 +28,13 @@
             app:srcCompat="@drawable/ic_cosmic_logo_faded" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/txHeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Android Version"
             android:textAlignment="center"
             android:textColor="#000000"
-            android:textSize="28sp"
+            android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -60,7 +60,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/imgMain1"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="8dp"
@@ -73,7 +73,7 @@
             app:srcCompat="@drawable/ic_android" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/txMain1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
@@ -95,7 +95,7 @@
             app:layout_constraintTop_toBottomOf="@+id/view" />
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/imgMain2"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="8dp"
@@ -107,7 +107,7 @@
             app:srcCompat="@drawable/ic_cosmic_logo_faded" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/txMain2_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
@@ -119,15 +119,15 @@
             app:layout_constraintTop_toTopOf="@+id/view2" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/txMain2_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="November 9, 2019"
             android:textColor="#000000"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/view2"
-            app:layout_constraintStart_toStartOf="@+id/textView4"
-            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+            app:layout_constraintStart_toStartOf="@+id/txMain2_1"
+            app:layout_constraintTop_toBottomOf="@+id/txMain2_1" />
 
         <View
             android:id="@+id/view3"
@@ -139,7 +139,7 @@
             app:layout_constraintTop_toBottomOf="@+id/view2" />
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/imgMain3"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_marginTop="8dp"
@@ -151,7 +151,7 @@
             app:srcCompat="@drawable/ic_shield" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/txMain3_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
@@ -164,15 +164,15 @@
             app:layout_constraintTop_toTopOf="@+id/view3" />
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/txMain3_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="November 9, 2019"
             android:textColor="@android:color/black"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/view3"
-            app:layout_constraintStart_toStartOf="@+id/textView6"
-            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+            app:layout_constraintStart_toStartOf="@+id/txMain3_1"
+            app:layout_constraintTop_toBottomOf="@+id/txMain3_1" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
