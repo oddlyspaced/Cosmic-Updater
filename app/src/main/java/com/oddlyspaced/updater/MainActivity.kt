@@ -24,10 +24,10 @@ class MainActivity : AppCompatActivity() {
     private fun checkSupport(): Int {
         return if (getProp.getProp("ro.cos.builddate").trim().isEmpty()) {
             val builder = AlertDialog.Builder(this)
-            builder.setTitle("Unsupported!")
-            builder.setMessage("It seems like this updater app is not meant to be used with this ROM!")
+            builder.setTitle(getString(R.string.app_unsupported_title))
+            builder.setMessage(getString(R.string.app_unsupported_message))
             builder.setCancelable(false)
-            builder.setPositiveButton("Exit") { _, _ ->
+            builder.setPositiveButton(getString(R.string.app_unsupported_exit)) { _, _ ->
                 finish()
             }
             builder.show()
@@ -42,9 +42,7 @@ class MainActivity : AppCompatActivity() {
             Handler().postDelayed(
                 {
                     val modal: UpdateModal? = getUpdate.getModal()
-                    println("called")
                     if (modal != null) {
-                        println("done")
                         updateScreen(modal)
                     } else {
                         checkUpdateJson(counter + 1)
@@ -53,19 +51,19 @@ class MainActivity : AppCompatActivity() {
             )
         }
         else {
-            txCheck.text = "Unable to check for Updates!"
+            txCheck.text = getString(R.string.button_unable_check)
             pbCheck.visibility = View.INVISIBLE
             txCheck.visibility = View.VISIBLE
         }
     }
 
     private fun loadDetails() {
-        val versionString = "Android Version " + getProp.getProp("ro.build.version.release").trim()
-        val versionCosmic = "CosmicOS Version " + getProp.getProp("ro.cos.version").trim()
+        val versionString = getString(R.string.body_android_version) + getProp.getProp("ro.build.version.release").trim()
+        val versionCosmic = getString(R.string.body_cosmic_version) + getProp.getProp("ro.cos.version").trim()
         txMain1.text = versionString
         txMain2_1.text = versionCosmic
-        txMain2_2.text = dateCodeToString("20190101")
-        txMain3_2.text = securityPatchToString("2019-11-05")
+        txMain2_2.text = dateCodeToString(getProp.getProp("ro.cos.builddate").trim())
+        txMain3_2.text = securityPatchToString(getProp.getProp("ro.build.version.security_patch").trim())
     }
 
     private fun setOnClick() {
@@ -99,18 +97,18 @@ class MainActivity : AppCompatActivity() {
 
     private fun monthToString(month: Int): String {
         return when(month) {
-            1 -> "January"
-            2 -> "February"
-            3 -> "March"
-            4 -> "April"
-            5 -> "May"
-            6 -> "June"
-            7 -> "July"
-            8 -> "August"
-            9 -> "September"
-            10 -> "October"
-            11 -> "November"
-            12 -> "December"
+            1 -> getString(R.string.month_january)
+            2 -> getString(R.string.month_february)
+            3 -> getString(R.string.month_march)
+            4 -> getString(R.string.month_april)
+            5 -> getString(R.string.month_may)
+            6 -> getString(R.string.month_june)
+            7 -> getString(R.string.month_july)
+            8 -> getString(R.string.month_august)
+            9 -> getString(R.string.month_september)
+            10 -> getString(R.string.month_october)
+            11 -> getString(R.string.month_november)
+            12 -> getString(R.string.month_december)
             else -> ""
         }
     }
@@ -118,20 +116,20 @@ class MainActivity : AppCompatActivity() {
     private fun updateScreen(modal: UpdateModal) {
         if (getProp.getProp("ro.cos.builddate").trim().toInt() >= modal.build.toInt()) {
             consHolder.visibility = View.GONE
-            txHeader.text = "No Updates\nAvailable"
+            txHeader.text = getString(R.string.header_update_unavailable)
             cardCheck.visibility = View.GONE
         }
         else {
             imgMain1.setImageDrawable(getDrawable(R.drawable.ic_download))
             imgMain2.setImageDrawable(getDrawable(R.drawable.ic_calendar))
             imgMain3.setImageDrawable(getDrawable(R.drawable.ic_changelog))
-            txHeader.text = "Update Available"
-            txMain1.text = "Size ${modal.size}mb"
+            txHeader.text = getString(R.string.header_update_available)
+            txMain1.text = getString(R.string.body_size_prefix) + modal.size + getString(R.string.body_size_suffix)
             txMain2_1.text = dateCodeToString(modal.build).trim()
             txMain2_2.visibility = View.GONE
-            txMain3_1.text = "Changelog"
+            txMain3_1.text = getString(R.string.body_changelog)
             txMain3_2.visibility = View.GONE
-            txCheck.text = "Download"
+            txCheck.text = getString(R.string.button_download)
             pbCheck.visibility = View.INVISIBLE
             txCheck.visibility = View.VISIBLE
         }

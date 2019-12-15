@@ -1,4 +1,31 @@
 <resources>
     <string name="app_name">Updater</string>
     <string name="updater_link">https://raw.githubusercontent.com/oddlyspaced/Cosmic-Updater/master/updater.json</string>
+    <string name="header_default">Android Version</string>
+    <string name="header_update_available">Update Available</string>
+    <string name="header_update_unavailable">No Update Available</string>
+    <string name="body_android_version">Android Version \</string>
+    <string name="body_cosmic_version">CosmicOS Version \</string>
+    <string name="body_security_patch">Android Security Patch</string>
+    <string name="body_changelog">Changelog</string>
+    <string name="body_size_prefix">Size \</string>
+    <string name="body_size_suffix">\ MB</string>
+    <string name="button_check_update">Check for Update</string>
+    <string name="button_unable_check">Unable to check for Updates!</string>
+    <string name="button_download">Download</string>
+    <string name="month_january">January</string>
+    <string name="month_february">February</string>
+    <string name="month_march">March</string>
+    <string name="month_april">April</string>
+    <string name="month_may">May</string>
+    <string name="month_june">June</string>
+    <string name="month_july">July</string>
+    <string name="month_august">August</string>
+    <string name="month_september">September</string>
+    <string name="month_october">October</string>
+    <string name="month_november">November</string>
+    <string name="month_december">December</string>
+    <string name="app_unsupported_title">Unsupported!</string>
+    <string name="app_unsupported_message">It seems like this Updater is not meant to be Used with this ROM!</string>
+    <string name="app_unsupported_exit">Exit</string>
 </resources>
