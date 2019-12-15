@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@color/colorPrimary"
     tools:context=".MainActivity">
 
-    <include layout="@layout/background"/>
+    <include layout="@layout/background" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:text="@string/header_default"
             android:textAlignment="center"
-            android:textColor="#000000"
+            android:textColor="@color/colorText"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -80,7 +80,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:text="@string/body_android_version"
-            android:textColor="#000000"
+            android:textColor="@color/colorText"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/view"
@@ -114,7 +114,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:text="@string/body_cosmic_version"
-            android:textColor="#000000"
+            android:textColor="@color/colorText"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/txMain2_2"
@@ -126,7 +126,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="November 9, 2019"
-            android:textColor="#000000"
+            android:textColor="@color/colorText"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/view2"
             app:layout_constraintStart_toStartOf="@+id/txMain2_1"
@@ -159,7 +159,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:text="@string/body_security_patch"
-            android:textColor="#000000"
+            android:textColor="@color/colorText"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/txMain3_2"
@@ -171,7 +171,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="November 9, 2019"
-            android:textColor="@android:color/black"
+            android:textColor="@color/colorText"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/view3"
             app:layout_constraintStart_toStartOf="@+id/txMain3_1"
