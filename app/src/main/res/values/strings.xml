@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Updater</string>
+    <string name="updater_link">https://raw.githubusercontent.com/oddlyspaced/Cosmic-Updater/master/updater.json</string>
 </resources>
